@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trevola | Listings</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header">
+        <div class="logo">TRE<span>VOLA</span></div>
+        <div class="header-tagline">YOUR STAY. YOUR WAY.</div>
+        <div class="header-actions">
+            <!-- Navigate directly to your existing Login / Register page -->
+            <a href="login.html" class="btn-outline">Sign In</a>
+            <a href="login.html#host-register" class="btn-neon">Become a Host</a>
+    
+            <!-- Dynamic Host actions  -->
+            <a href="create-listing.html" id="createListingBtn" class="btn-outline" style="display: none;">Create Listing</a>
+            <a href="manage-listings.html" id="manageListingsBtn" class="btn-outline" style="display: none;">Manage Listings</a>
+            <button id="signOutBtn" class="btn-outline" style="display: none;">Sign Out</button>
+        </div>
+       
+      </header>
+
+      <!-- 2. Hero Section -->
+      <section class="hero-section">
+        <span class="hero-badge">THE 2026 BOOKING STANDARD</span>
+        <h1 class="hero-title">Your Stay.<br /><span>Your Way.</span></h1>
+
+        <!-- Category Filters Pills -->
+        <div class="category-filters">
+          <button class="category-btn active" data-category="all">
+            PROFESSIONAL
+          </button>
+          <button class="category-btn" data-category="family">
+            WORKING CLASS
+          </button>
+          <button class="category-btn" data-category="adventure">
+            TOURIST
+          </button>
+        </div>
+
+        <!-- Search / Booking Bar -->
+        <div class="search-bar">
+          <div class="search-item">
+            <label>LOCATION</label>
+            <input
+              type="text"
+              id="locationInput"
+              placeholder="Where is the job?"
+            />
+          </div>
+          <div class="search-item">
+            <label>DATES</label>
+            <input type="text" id="dateInput" placeholder="Add dates" />
+          </div>
+          <button class="btn-neon search-btn">FIND MY HQ</button>
+        </div>
+      </section>
+
+      <!-- 3. Dynamic Listings Container Grid -->
+      <main>
+        <h2 class="section-heading">Available Stays</h2>
+        <div id="listingsContainer">
+          <!-- Listings injected dynamically via JavaScript -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Import all_listings.js -->
+    <script type="module" src="all_listings.js"></script>
+  </body>
+</html>

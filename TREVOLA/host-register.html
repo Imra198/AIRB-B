@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host Registration | Trevola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="container" style="max-width: 450px; margin-top: 60px;">
+        
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        
+        <div class="auth-card">
+            <h2>Register as Host</h2>
+            <form id="hostRegistrationForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>  
+
+                <button type="submit" class="btn-neon" style="width: 100%; margin-top: 10px;">Create Host Account</button>
+                <button type="button" id="backToLoginBtn" class="btn-outline" style="width: 100%; margin-top: 12px;">Back to Login</button>    
+                
+                <p id="message" class="auth-msg"></p>
+            </form>
+        </div>
+
+    </div>
+    <script src="file.js"></script>
+</body>
+</html>

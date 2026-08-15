@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevola | Your Stay. Your Way.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navigation Header -->
+        <header class="main-header">
+            <div class="logo">TRE<span>VOLA</span></div>
+            <div class="header-tagline">YOUR STAY. YOUR WAY.</div>
+            
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <span class="hero-badge">THE 2026 BOOKING STANDARD</span>
+            <h1 class="hero-title">Your Stay.<br><span>Your Way.</span></h1>
+
+            <!-- Category Filter Pills -->
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">PROFESSIONAL</button>
+                <button class="category-btn" data-category="family">WORKING CLASS</button>
+                <button class="category-btn" data-category="adventure">TOURIST</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <div class="search-item">
+                    <label for="searchInput">SEARCH A PROPERTY</label>
+                    <input type="text" id="searchInput" placeholder="Search title, city">
+                </div>
+                <div class="search-item">
+                    <label for="maxPriceInput">MAX PRICE ($/night)</label>
+                    <input type="text" id="maxPriceInput" placeholder="e.g. 200" min="0">
+                </div>
+                <button id="searchBtn" type="button" class="btn-neon search-btn">SEARCH</button>
+            </div>
+        </section>
+
+        <!-- Airbnb-Style Tabbed Auth Section -->
+        <section id="login-section" class="auth-wrapper">
+            <div class="auth-card">
+
+                <!-- Tab Switcher -->
+                <div class="auth-tabs">
+                    <button type="button" class="tab-btn active" id="userTabBtn" onclick="switchAuthTab('user')">User
+                        Login</button>
+                    <button type="button" class="tab-btn" id="hostTabBtn" onclick="switchAuthTab('host')">Host
+                        Login</button>
+                </div>
+
+                <!-- User Form -->
+                <form id="userform" class="auth-form active">
+                    <div class="input-group">
+                        <label for="userUsername">Username</label>
+                        <input type="text" id="userUsername" placeholder="Enter your username" autocomplete="off"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <label for="userPassword">Password</label>
+                        <input type="password" id="userPassword" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-neon full-width">Login as User</button>
+                    <button type="button" id="registerBtn" class="btn-outline full-width">Create Account</button>
+                    <p id="userLoginMessage" class="auth-msg"></p>
+                </form>
+
+                <!-- Host Form -->
+                <form id="hostform" class="auth-form" style="display: none;">
+                    <div class="input-group">
+                        <label for="hostUsername">Username</label>
+                        <input type="text" id="hostUsername" placeholder="Enter host username" autocomplete="off"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <label for="hostPassword">Password</label>
+                        <input type="password" id="hostPassword" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-neon full-width">Login as Host</button>
+                    <button type="button" id="hostRegisterBtn" class="btn-outline full-width">Register as Host</button>
+                    <p id="hostLoginMessage" class="auth-msg"></p>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Listings Section -->
+        <main class="listings-section">
+            <h2 class="section-heading">Featured Stays</h2>
+            <div id="listingsContainer">
+                <div class="no-listings">
+                    <p>No listings found in this category.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="file.js"></script>
+    <script type="module" src="all_listings.js"></script>
+</body>
+
+</html>
